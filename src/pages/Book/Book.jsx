@@ -1,11 +1,13 @@
 import React, { use } from 'react'
 import { FaStar } from "react-icons/fa";
+import { Link } from 'react-router';
 
-const Book = ({ b }) => {
+const Book = ({ b , book}) => {
     // const data = use(bookPromise)
     // console.log(data)
     console.log(b)
     return (
+        <Link to={`/BookDetails/${b.bookId}`}>
         <div className='w-[374px]  h-[482px] px-24 py-24'>
             <div className="card bg-base-100 w-96 shadow-sm ">
                 <figure className='w-[326px] h-[230px] rounded-[16px] bg-[#F3F3F3]'>
@@ -50,6 +52,9 @@ const Book = ({ b }) => {
             </div>
 
         </div>
+        
+        
+        </Link>
     )
 }
 
